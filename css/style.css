@@ -81,6 +81,14 @@ body {
     animation-iteration-count: infinite, infinite;
 }
 
+.bg-logo-typescript { 
+    color: #3178c6; 
+    animation-name: floatLogo, pulseCss;
+    animation-duration: 35s, 12s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+}
+
 .bg-logo-js { 
     color: #f7df1e; 
     animation-name: floatLogo, pulseJs;
@@ -89,26 +97,10 @@ body {
     animation-iteration-count: infinite, infinite;
 }
 
-.bg-logo-react { 
-    color: #61dafb; 
-    animation-name: floatLogo, pulseReact;
-    animation-duration: 45s, 11s;
-    animation-timing-function: linear, ease-in-out;
-    animation-iteration-count: infinite, infinite;
-}
-
 .bg-logo-vue { 
     color: #4fc08d; 
     animation-name: floatLogo, pulseVue;
     animation-duration: 50s, 13s;
-    animation-timing-function: linear, ease-in-out;
-    animation-iteration-count: infinite, infinite;
-}
-
-.bg-logo-flutter { 
-    color: #02569b; 
-    animation-name: floatLogo, pulseFlutter;
-    animation-duration: 55s, 14s;
     animation-timing-function: linear, ease-in-out;
     animation-iteration-count: infinite, infinite;
 }
@@ -133,6 +125,30 @@ body {
     color: #339933; 
     animation-name: floatLogo, pulseNode;
     animation-duration: 70s, 17s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+}
+
+.bg-logo-laravel { 
+    color: #ff2d20; 
+    animation-name: floatLogo, pulsePhp;
+    animation-duration: 55s, 14s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+}
+
+.bg-logo-database { 
+    color: #0f766e; 
+    animation-name: floatLogo, pulsePython;
+    animation-duration: 62s, 15s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+}
+
+.bg-logo-docker { 
+    color: #2496ed; 
+    animation-name: floatLogo, pulseCss;
+    animation-duration: 68s, 16s;
     animation-timing-function: linear, ease-in-out;
     animation-iteration-count: infinite, infinite;
 }
@@ -167,19 +183,9 @@ body {
     50% { opacity: 0.23; filter: blur(4px); }
 }
 
-@keyframes pulseReact {
-    0%, 100% { opacity: 0.12; filter: blur(2px); }
-    50% { opacity: 0.20; filter: blur(4px); }
-}
-
 @keyframes pulseVue {
     0%, 100% { opacity: 0.13; filter: blur(2px); }
     50% { opacity: 0.21; filter: blur(4px); }
-}
-
-@keyframes pulseFlutter {
-    0%, 100% { opacity: 0.14; filter: blur(2px); }
-    50% { opacity: 0.22; filter: blur(4px); }
 }
 
 @keyframes pulsePhp {
@@ -534,6 +540,12 @@ nav ul li a:hover::after {
     max-width: 500px;
 }
 
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
 .hero-image {
     position: relative;
 }
@@ -593,6 +605,35 @@ nav ul li a:hover::after {
 .about-text p {
     margin-bottom: 1.5rem;
     color: var(--gray-color);
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.highlight-item {
+    background-color: white;
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 16px;
+}
+
+.highlight-item span {
+    display: block;
+    color: var(--gray-color);
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.highlight-item strong {
+    color: var(--dark-color);
+    font-size: 0.95rem;
 }
 
 /* Education Section */
@@ -880,6 +921,9 @@ nav ul li a:hover::after {
     background-color: var(--gray-light);
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-img::before {
@@ -899,6 +943,27 @@ nav ul li a:hover::after {
     100% { background: linear-gradient(45deg, rgba(239, 68, 68, 0.1), rgba(139, 92, 246, 0.1)); }
 }
 
+.project-attendance { background-color: #dbeafe; }
+.project-music { background-color: #fef3c7; }
+.project-results { background-color: #dcfce7; }
+.project-shoes { background-color: #fee2e2; }
+.project-gym { background-color: #ede9fe; }
+
+.project-icon {
+    position: relative;
+    z-index: 1;
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.72);
+    color: var(--primary-color);
+    font-size: 2rem;
+    box-shadow: var(--shadow);
+}
+
 .project-content {
     padding: 25px;
     flex-grow: 1;
@@ -909,6 +974,13 @@ nav ul li a:hover::after {
 .project-content h3 {
     color: var(--dark-color);
     margin-bottom: 10px;
+}
+
+.project-meta {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
 }
 
 .project-description {
@@ -950,6 +1022,100 @@ nav ul li a:hover::after {
     font-size: 0.9rem;
 }
 
+/* Experience Section */
+.experience {
+    background-color: rgba(248, 250, 252, 0.85);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+    gap: 40px;
+}
+
+.experience-card {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 32px;
+}
+
+.experience-card h3 {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.experience-list {
+    display: grid;
+    gap: 18px;
+}
+
+.experience-item {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 16px;
+}
+
+.experience-item strong {
+    display: block;
+    color: var(--dark-color);
+    margin-bottom: 4px;
+}
+
+.experience-item span {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.experience-item p {
+    color: var(--gray-color);
+}
+
+.company-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.company-tags span {
+    background-color: rgba(37, 99, 235, 0.1);
+    border-radius: 20px;
+    color: var(--primary-color);
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 8px 13px;
+}
+
+.language-box {
+    border-top: 1px solid var(--gray-light);
+    margin-top: 30px;
+    padding-top: 26px;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f8fafc;
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    padding: 14px 16px;
+}
+
+.language-item span {
+    color: var(--gray-color);
+    font-weight: 600;
+}
+
+.language-item strong {
+    color: var(--dark-color);
+}
+
 /* Contact Section */
 .contact-content {
     display: grid;
@@ -967,6 +1133,20 @@ nav ul li a:hover::after {
     display: flex;
     align-items: flex-start;
     gap: 15px;
+}
+
+.contact-item p {
+    overflow-wrap: anywhere;
+}
+
+.contact-item a {
+    color: var(--gray-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
 }
 
 .contact-icon {
@@ -1093,7 +1273,7 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 992px) {
-    .hero-content, .about-content, .education-content, .contact-content {
+    .hero-content, .about-content, .education-content, .experience-grid, .contact-content {
         grid-template-columns: 1fr;
     }
     
@@ -1164,6 +1344,10 @@ footer {
     .project-actions {
         flex-direction: column;
     }
+
+    .experience-card {
+        padding: 28px;
+    }
     
     .bg-logo {
         font-size: 4rem;
@@ -1185,6 +1369,19 @@ footer {
     
     .contact-form {
         padding: 25px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        text-align: center;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
     }
     
     .bg-logo {

@@ -5,14 +5,15 @@ const animatedBg = document.getElementById('animatedBg');
 const bgTechLogos = [
     { name: 'HTML', icon: 'fab fa-html5', class: 'bg-logo-html' },
     { name: 'CSS', icon: 'fab fa-css3-alt', class: 'bg-logo-css' },
-    { name: 'SASS', icon: 'fab fa-sass', class: 'bg-logo-sass' },
+    { name: 'TypeScript', icon: 'fas fa-code', class: 'bg-logo-typescript' },
     { name: 'JavaScript', icon: 'fab fa-js', class: 'bg-logo-js' },
-    { name: 'React', icon: 'fab fa-react', class: 'bg-logo-react' },
     { name: 'Vue.js', icon: 'fab fa-vuejs', class: 'bg-logo-vue' },
-    { name: 'Flutter', icon: 'fab fa-flutter', class: 'bg-logo-flutter' },
+    { name: 'Laravel', icon: 'fab fa-laravel', class: 'bg-logo-laravel' },
     { name: 'PHP', icon: 'fab fa-php', class: 'bg-logo-php' },
     { name: 'Python', icon: 'fab fa-python', class: 'bg-logo-python' },
-    { name: 'Node.js', icon: 'fab fa-node-js', class: 'bg-logo-node' }
+    { name: 'Node.js', icon: 'fab fa-node-js', class: 'bg-logo-node' },
+    { name: 'Database', icon: 'fas fa-database', class: 'bg-logo-database' },
+    { name: 'Docker', icon: 'fab fa-docker', class: 'bg-logo-docker' }
 ];
 
 // Create multiple instances of each logo for a denser background
