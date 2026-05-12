@@ -21,7 +21,6 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
 }
 
 body {
@@ -1272,238 +1271,104 @@ footer {
     font-size: 0.9rem;
 }
 
-/* =============================================
-   RESPONSIVE DESIGN — ALL DEVICES
-   1280px+ : Large desktop (default)
-   1024px  : Small desktop / large tablet landscape
-   992px   : Tablet landscape
-   768px   : Tablet portrait
-   576px   : Large mobile
-   400px   : Small mobile
-   320px   : Very small mobile
-============================================= */
-
-/* --- Tablet landscape & small desktop (≤1024px) --- */
-@media (max-width: 1024px) {
-    .hero-content {
-        gap: 40px;
-    }
-
-    #profile2 {
-        width: 20rem;
-        height: 25rem;
-    }
-
-    #profile {
-        width: 20rem;
-        height: 24rem;
-    }
-
-    .education-content,
-    .contact-content {
-        gap: 40px;
-    }
-
-    .experience-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-
-    .skills-container {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-
-    .projects-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-}
-
-/* --- Tablet landscape (≤992px) --- */
+/* Responsive Design */
 @media (max-width: 992px) {
-    .hero-content,
-    .about-content,
-    .education-content,
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .experience-grid {
+    .hero-content, .about-content, .education-content, .experience-grid, .contact-content {
         grid-template-columns: 1fr;
     }
-
-    .skills-container {
-        grid-template-columns: 1fr;
-    }
-
+    
     .hero-text h1 {
         font-size: 2.8rem;
     }
-
+    
     .section-title h2 {
         font-size: 2.2rem;
     }
-
-    .hero-content {
-        text-align: center;
+    
+    .skills-container {
+        grid-template-columns: 1fr;
     }
-
-    .hero-text p {
-        max-width: 100%;
-    }
-
-    .hero-actions {
-        justify-content: center;
-    }
-
-    #profile2,
-    #profile {
-        width: 100%;
-        max-width: 22rem;
-        height: auto;
-        aspect-ratio: 4 / 5;
-        margin: 0 auto;
-        display: block;
-    }
-
-    .about-content {
-        text-align: center;
-    }
-
-    .about-highlights {
-        justify-items: center;
-    }
-
+    
     .bg-logo {
         font-size: 5rem;
     }
 }
 
-/* --- Tablet portrait (≤768px) --- */
 @media (max-width: 768px) {
-    /* Mobile nav */
     nav ul {
         position: fixed;
-        top: 70px;
+        top: 80px;
         left: 0;
         width: 100%;
         background-color: white;
         flex-direction: column;
-        padding: 16px 20px 24px;
+        padding: 20px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        transform: translateY(-110%);
+        transform: translateY(-100%);
         opacity: 0;
         visibility: hidden;
         transition: var(--transition);
         z-index: 999;
     }
-
+    
     nav ul.active {
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
     }
-
+    
     nav ul li {
-        margin: 0 0 12px 0;
+        margin: 0 0 15px 0;
     }
-
-    nav ul li:last-child {
-        margin-bottom: 0;
-    }
-
+    
     .mobile-menu-btn {
         display: block;
     }
-
-    /* Hero */
+    
     .hero {
-        padding-top: 120px;
-        padding-bottom: 70px;
+        padding-top: 140px;
     }
-
+    
     .hero-text h1 {
-        font-size: 2.4rem;
+        font-size: 2.5rem;
     }
-
-    /* Sections */
-    section {
-        padding: 80px 0;
-    }
-
-    .section-title {
-        margin-bottom: 40px;
-    }
-
-    /* Skills */
-    .skills-category {
-        padding: 28px;
-    }
-
-    /* Projects */
+    
     .projects-grid {
         grid-template-columns: 1fr;
     }
-
-    .project-actions {
-        flex-direction: row;
-    }
-
-    /* Education */
-    .education-info,
-    .program-structure {
-        padding: 24px;
-    }
-
-    /* Experience */
-    .experience-card {
-        padding: 24px;
-    }
-
-    /* Contact */
-    .contact-form {
+    
+    .skills-category {
         padding: 30px;
     }
-
-    /* Footer */
-    .footer-content {
+    
+    .project-actions {
         flex-direction: column;
-        gap: 24px;
-        text-align: center;
     }
 
+    .experience-card {
+        padding: 28px;
+    }
+    
     .bg-logo {
         font-size: 4rem;
     }
 }
 
-/* --- Large mobile (≤576px) --- */
 @media (max-width: 576px) {
-    .container {
-        padding: 0 16px;
-    }
-
     section {
-        padding: 64px 0;
+        padding: 70px 0;
     }
-
-    .section-title h2 {
-        font-size: 1.9rem;
-    }
-
-    /* Hero */
-    .hero {
-        padding-top: 110px;
-        padding-bottom: 60px;
-    }
-
+    
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
-
-    .hero-text p {
-        font-size: 1rem;
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-form {
+        padding: 25px;
     }
 
     .hero-actions {
@@ -1515,195 +1380,11 @@ footer {
         text-align: center;
     }
 
-    /* About */
     .about-highlights {
         grid-template-columns: 1fr;
     }
-
-    /* Skills */
-    .skills-category {
-        padding: 22px;
-    }
-
-    .skill-tag {
-        font-size: 0.88rem;
-        padding: 8px 14px;
-    }
-
-    /* Education */
-    .education-info,
-    .program-structure {
-        padding: 20px;
-    }
-
-    .education-item h4 {
-        font-size: 1.05rem;
-    }
-
-    /* Projects */
-    .project-content {
-        padding: 18px;
-    }
-
-    .project-actions {
-        flex-direction: column;
-    }
-
-    /* Experience */
-    .experience-card {
-        padding: 20px;
-    }
-
-    /* Contact */
-    .contact-form {
-        padding: 20px;
-    }
-
-    .contact-icon {
-        width: 42px;
-        height: 42px;
-        font-size: 1rem;
-        flex-shrink: 0;
-    }
-
-    /* Footer */
-    .footer-logo {
-        font-size: 1.5rem;
-    }
-
+    
     .bg-logo {
         font-size: 3rem;
     }
-}
-
-/* --- Small mobile (≤400px) --- */
-@media (max-width: 400px) {
-    .container {
-        padding: 0 12px;
-    }
-
-    section {
-        padding: 52px 0;
-    }
-
-    .section-title h2 {
-        font-size: 1.6rem;
-    }
-
-    .hero {
-        padding-top: 100px;
-    }
-
-    .hero-text h1 {
-        font-size: 1.75rem;
-    }
-
-    .hero-text p {
-        font-size: 0.95rem;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.95rem;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .skills-category {
-        padding: 18px;
-    }
-
-    .skill-tag {
-        font-size: 0.82rem;
-        padding: 7px 12px;
-    }
-
-    .education-info,
-    .program-structure,
-    .experience-card,
-    .contact-form {
-        padding: 16px;
-    }
-
-    .contact-info {
-        gap: 18px;
-    }
-
-    .contact-icon {
-        width: 38px;
-        height: 38px;
-        font-size: 0.9rem;
-    }
-
-    .project-content {
-        padding: 14px;
-    }
-
-    .footer-content {
-        gap: 18px;
-    }
-
-    .social-links {
-        gap: 14px;
-    }
-
-    .bg-logo {
-        font-size: 2.5rem;
-    }
-}
-
-/* --- Very small mobile (≤320px) --- */
-@media (max-width: 320px) {
-    .hero-text h1 {
-        font-size: 1.5rem;
-    }
-
-    .section-title h2 {
-        font-size: 1.4rem;
-    }
-
-    nav ul li a {
-        font-size: 0.9rem;
-    }
-
-    .btn {
-        padding: 9px 16px;
-        font-size: 0.88rem;
-    }
-
-    .highlight-item {
-        padding: 12px;
-    }
-
-    .course-tag,
-    .tech-tag {
-        font-size: 0.75rem;
-        padding: 4px 10px;
-    }
-
-    .bg-logo {
-        font-size: 2rem;
-    }
-}
-
-/* Vue Contact Form */
-.success-message {
-    background-color: rgba(16, 185, 129, 0.1);
-    border: 1px solid var(--success-color);
-    border-radius: var(--radius);
-    color: var(--success-color);
-    font-weight: 500;
-    margin-bottom: 16px;
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-button:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-    transform: none !important;
 }
