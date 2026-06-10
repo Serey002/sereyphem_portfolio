@@ -52,8 +52,3 @@ setTimeout(() => {
     document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => observer.observe(el));
     document.querySelectorAll('.skill-progress').forEach(bar => skillObserver.observe(bar));
 }, 100);
-
-// Set fixed color palette — #0096C7 primary, #F1FAFE light
-const root = document.documentElement;
-root.style.setProperty('--primary-color', '#0096C7');
-root.style.setProperty('--secondary-color', '#0077a8');
