@@ -1,7 +1,9 @@
 import { SkillCategory, EducationItem, Project, Workshop, ContactInfo } from './types';
 
-// Path to the newly generated professional image
-export const profilePictureUrl = '/src/assets/images/sereyAbout.png';
+// Import images so Vite processes and bundles them for production
+import sereyAboutImg from './assets/images/sereyAbout.png';
+
+export const profilePictureUrl = sereyAboutImg;
 
 export const personalInfo = {
   name: 'Serey PHEM',

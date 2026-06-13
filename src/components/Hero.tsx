@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 import { personalInfo } from '../data';
 import InteractiveCanvas from './InteractiveCanvas';
+import sereyHeroImg from '../assets/images/sereyHero.png';
 
 export default function Hero() {
   const handleScrollTo = (id: string) => {
@@ -19,7 +20,7 @@ export default function Hero() {
     }
   };
 
-  const realPhotoUrl = '/src/assets/images/sereyHero.png';
+  const realPhotoUrl = sereyHeroImg;
 
   return (
     <section
