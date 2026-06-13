@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;850&family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media print {
+  body.printing-resume {
+    background: white !important;
+    background-color: white !important;
+    color: #0f172a !important;
+  }
+  
+  /* Hide standard page elements */
+  body.printing-resume #root,
+  body.printing-resume header,
+  body.printing-resume footer,
+  body.printing-resume main,
+  body.printing-resume .fixed:not(.z-50) {
+    display: none !important;
+  }
+
+  body.printing-resume .fixed.z-50 {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: white !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  body.printing-resume .sticky {
+    display: none !important; /* Hide Preview topbar */
+  }
+
+  body.printing-resume .bg-cyan-950\/20 {
+    display: none !important; /* Hide Tip alert info banner */
+  }
+
+  body.printing-resume #printable-cv-document {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .print-page-break {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  /* Support displaying exact template backgrounds */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
