@@ -8,7 +8,7 @@ export const profilePictureUrl = sereyAboutImg;
 export const personalInfo = {
   name: 'Serey PHEM',
   title: 'Web Developer Intern',
-  bio: 'Second-year Web Development student with experience building responsive and dynamic web applications using PHP, Laravel, Node.js, MySQL, HTML, CSS, JavaScript, TypeScript, and Vue.js. Passionate about developing efficient, user-friendly, and scalable web systems while continuously improving technical and problem-solving skills. Seeking a Web Developer Internship to gain industry experience and contribute to professional development projects.',
+  bio: 'Second-year Web Programming student with experience building responsive and dynamic web applications using PHP, Laravel, Node.js, MySQL, HTML, CSS, JavaScript, TypeScript, and Vue.js. Passionate about developing efficient, user-friendly, and scalable web systems while continuously improving technical and problem-solving skills. Seeking a Web Developer Internship to gain industry experience and contribute to professional development projects.',
   detailedBio: [
     'I am an ambitious second-year Web Programming student at Passerelles Numériques Cambodia, currently pursuing an Associate Degree.',
     'Backed by solid knowledge across the complete software development lifecycle, response frontend grids, backend microframework architectures, and structured SQL or NoSQL databases.',
