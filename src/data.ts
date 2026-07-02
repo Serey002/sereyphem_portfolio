@@ -29,10 +29,10 @@ export const skillsData: SkillCategory[] = [
     title: 'Hard Skills',
     skills: [
       { name: 'HTML5 & CSS3', level: 90, iconClass: 'Html5' },
-      { name: 'JavaScript', level: 85, iconClass: 'Code' },
-      { name: 'Typescript - OOP', level: 80, iconClass: 'Shield' },
-      { name: 'Vue.js', level: 75, iconClass: 'Cpu' },
-      { name: 'Python (Algorithm)', level: 80, iconClass: 'FileCode' },
+      { name: 'JavaScript', level: 70, iconClass: 'Code' },
+      { name: 'Typescript - OOP', level: 70, iconClass: 'Shield' },
+      { name: 'Vue.js', level: 60, iconClass: 'Cpu' },
+      { name: 'Python (Algorithm)', level: 50, iconClass: 'FileCode' },
       { name: 'Database (MySQL and Mongodb)', level: 82, iconClass: 'Database' },
       { name: 'PHP', level: 80, iconClass: 'Server' },
       { name: 'Laravel', level: 85, iconClass: 'Layers' },
@@ -43,12 +43,12 @@ export const skillsData: SkillCategory[] = [
     title: 'Tools & Technologies',
     skills: [
       { name: 'GitHub (Version Control)', level: 90, iconClass: 'GitBranch' },
-      { name: 'Jira (Agile Management)', level: 85, iconClass: 'CheckSquare' },
+      { name: 'Jira (Agile Management)', level: 60, iconClass: 'CheckSquare' },
       { name: 'Figma (UI/UX Design)', level: 80, iconClass: 'Palette' },
       { name: 'Postman', level: 85, iconClass: 'Terminal' },
-      { name: 'AWS Free Trial', level: 70, iconClass: 'Cloud' },
-      { name: 'Docker (Basic)', level: 75, iconClass: 'Box' },
-      { name: 'Ubuntu (Basic)', level: 70, iconClass: 'HardDrive' },
+      { name: 'AWS Free Trial', level: 30, iconClass: 'Cloud' },
+      { name: 'Docker (Basic)', level: 30, iconClass: 'Box' },
+      { name: 'Ubuntu (Basic)', level: 30, iconClass: 'HardDrive' },
       { name: 'Vercel', level: 80, iconClass: 'ExternalLink' },
       { name: 'AI Tools (Cloud AI, ChatGPT, Gemini)', level: 85, iconClass: 'Lightbulb' }
     ]
@@ -249,7 +249,7 @@ export const companyVisits = [
 export const contactInfoItems: ContactInfo[] = [
   {
     label: 'Location',
-    value: '1BP 511, Phum Tropeang Chhuk (Borey Sorla) Sangkat, Street 371, Phnom Penh, Cambodia',
+    value: 'Phum Tropeang Chhuk (Borey Sorla) Sangkat, Street 371, Phnom Penh, Cambodia',
     iconClass: 'MapPin'
   },
   {
@@ -281,7 +281,7 @@ export const contactInfoItems: ContactInfo[] = [
 export const socialLinks = [
   { platform: 'GitHub', url: 'https://github.com/Serey002', iconClass: 'Github' },
   { platform: 'LinkedIn', url: 'https://www.linkedin.com/in/serey-phem-516842393/', iconClass: 'Linkedin' },
-  { platform: 'Telegram', url: 'https://t.me/serey002', iconClass: 'Send' }
+  { platform: 'Telegram', url: 'https://t.me/sereyphem', iconClass: 'Send' }
 ];
 
 export const cvDownloadPlaceholder = '#';
