@@ -44,12 +44,25 @@ export default function Contact() {
     }
 
     try {
-      // Simulate real API dispatch
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || !data.success) {
+        throw new Error(data.error || 'Request failed.');
+      }
+
       setSubmitSuccess(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch {
-      setErrorMessage('Oops! Something went wrong. Please try emailing directly.');
+    } catch (error) {
+      setErrorMessage(
+        error instanceof Error && error.message !== 'Request failed.'
+          ? error.message
+          : 'Oops! Something went wrong. Please try emailing directly.',
+      );
     } finally {
       setIsSubmitting(false);
     }
